@@ -23,11 +23,15 @@
   <body>
     <nav class="light-blue accent-">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Devlog</a>
+        <a href="/" class="brand-logo">Devlog</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">SignIn</a></li>
-          <li><a href="badges.html">SignOut</a></li>
-          <li><a href="collapsible.html">New</a></li>
+          <li><%= link_to "SignIn", new_user_session_path %></li>
+          <% if user_signed_in? %>
+          <li><%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "New", new_article_path %></li>
+          <% else %>
+          <li><%= link_to "SignUp", new_user_registration_path %></li>
+          <% end %>
         </ul>
       </div>
     </nav>
