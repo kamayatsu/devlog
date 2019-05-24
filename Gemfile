@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gemfiles
 gem 'kaminari'
 gem 'devise'
+gem 'carrierwave'

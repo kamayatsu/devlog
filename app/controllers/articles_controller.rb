@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   def index
+    @articles = Article.order('created_at DESC').includes(:user).page(params[:page]).per(5)
   end
 
   def new

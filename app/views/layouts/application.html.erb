@@ -18,6 +18,7 @@
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
@@ -25,11 +26,11 @@
       <div class="nav-wrapper">
         <a href="/" class="brand-logo">Devlog</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><%= link_to "SignIn", new_user_session_path %></li>
           <% if user_signed_in? %>
           <li><%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
           <li><%= link_to "New", new_article_path %></li>
           <% else %>
+          <li><%= link_to "SignIn", new_user_session_path %></li>
           <li><%= link_to "SignUp", new_user_registration_path %></li>
           <% end %>
         </ul>
