@@ -1,0 +1,23 @@
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $('#textarea1').val();
+    $('#textarea1').trigger('autoresize');
+  </script>
+
+
+    <%= form_for @article do |f|  %>
+      <div class="input-field">
+        <%= f.text_field :title, placeholder: "title" %>
+      </div>
+      <div class="input-field">
+        <%= f.text_area :detail, placeholder: "textarea", id: "textarea1", class: "materialize-textarea"  %>
+      </div>
+      <div>
+        <%= f.file_field :image %>
+      </div>
+      <div id="send1">
+        <%= f.submit "Send", class: "btn" %>
+      </div>
+    <% end %>
