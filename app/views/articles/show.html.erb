@@ -6,7 +6,7 @@
               <span class="card-title"><%= @article.title %></span>
             </div>
             <div class="card-content">
-              <p><%= @article.detail %></p>
+              <p><%= simple_format(@article.detail) %></p>
             </div>
             <div class="card-action">
               <%= link_to "edit", edit_article_path(@article) %>
