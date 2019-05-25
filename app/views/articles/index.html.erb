@@ -13,6 +13,8 @@
             </div>
             <div class="card-action">
               <%= link_to "more", article_path(article) %>
+              <%= link_to "edit", edit_article_path(article) %>
+              <%= link_to "delete", article_path(article), method: :delete %>
             </div>
           </div>
           <% end %>
