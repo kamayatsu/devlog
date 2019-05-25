@@ -13,6 +13,7 @@
   <div class="section white">
     <div class="row container">
       <h2 class="header"><%= @article.title %></h2>
+      <h4 class="header2 right"><%= @article.user.nickname %></h4>
       <p class="grey-text text-darken-3 lighten-3"><%= simple_format(@article.detail) %></p>
     </div>
   </div>

@@ -27,6 +27,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if user_signed_in? %>
           <li><%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "MyPage", user_path(current_user) %></li>
           <li><%= link_to "New", new_article_path %></li>
           <% else %>
           <li><%= link_to "SignIn", new_user_session_path %></li>
@@ -36,28 +37,18 @@
       </div>
     </nav>
     <%= yield %>
-        <footer  class="light-blue accent-">
+        <footer class="page-footer light-blue accent-">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
+                <h5 class="white-text">Thank you for reading!</h5>
+                <p class="grey-text text-lighten-4">Have a nice day!</p>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2019 Copyright katsuyama.Inc
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2019 Copyright H.Katsuyama
             </div>
           </div>
         </footer>
