@@ -2,7 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.brand-logo {
+  margin-left: 20px;
+}
+
+nav li {
+  min-width: 100px;
+  text-align: center;
+}
+
 .card-content {
   overflow: hidden;
   height: 6.0em;
 }
+
+.parallax-container {
+  height: 500px;
+}
+
+.pagination {
+  margin-left: 25%;
+}
+

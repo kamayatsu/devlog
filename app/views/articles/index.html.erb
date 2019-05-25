@@ -1,6 +1,8 @@
-      <% @articles.each do |article| %>
       <div class="row">
-        <div class="col s6 offset-s3">
+        <div class="col s3">
+        </div>
+        <div class="col s6">
+          <% @articles.each do |article| %>
           <div class="card">
             <div class="card-image">
               <%= image_tag article.image %>
@@ -13,7 +15,14 @@
               <%= link_to "more", article_path(article) %>
             </div>
           </div>
-        </div>      
+          <% end %>
+        </div>
+        <div class="col s3">
+          <div class="fixed-action-btn">
+            <a class="btn-floating btn-large waves-effect waves-light blue right" href="/articles/new">
+              <i class="material-icons">mode_edit</i>
+            </a>
+          </div>
+        </div>
       </div>
-      <% end %>
       <%= paginate @articles %>
