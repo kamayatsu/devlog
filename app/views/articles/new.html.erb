@@ -1,8 +1,22 @@
-  <div>
+<div class="row">
+  <div class="col s2">
+  </div>
+  <div class="col s8">
     <%= form_for @article do |f|  %>
-      <%= f.text_field :title, placeholder: "title" %>
-      <%= f.text_area :detail, placeholder: "textarea"  %>
-      <%= f.file_field :image, placeholder: "image"  %>
-      <%= f.submit "Send" %>
+      <div class="input-field">
+        <%= f.text_field :title, placeholder: "title" %>
+      </div>
+      <div class="input-field">
+        <%= f.text_area :detail, placeholder: "textarea", class: "materialize-textarea"  %>
+      </div>
+      <div>
+        <%= f.file_field :image %>
+      </div>
+      <div id="send1">
+        <%= f.submit "Send", class: "btn" %>
+      </div>
     <% end %>
   </div>
+  <div class="col s2">
+  </div>
+</div>
